@@ -37,6 +37,7 @@
 </head>
 
 <body>
+    <h1 style="font-size: 200px">abdooooooooo</h1>
     {{-- <div class="preloader">
         <img class="preloader__image" width="55" src="{{asset('assets/images/loader.png" alt="" />
     </div> --}}
