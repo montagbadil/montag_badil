@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home One || Oganik || HTML Template For Organic Stores</title>
     <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/images/favicons/apple-touch-icon.png')}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/images/favicons/favicon-32x32.png')}}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicons/favicon-16x16.png')}}" />
+    <link rel="manifest" href="{{asset('assets/images/favicons/site.webmanifest')}}" />
     <meta name="description" content="Agrikon HTML Template For Agriculture Farm & Farmers" />
 
     <!-- fonts -->
@@ -19,26 +19,26 @@
         rel="stylesheet" />
 
 
-    <link rel="stylesheet" href="assets/vendors/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
-    <link rel="stylesheet" href="assets/vendors/organik-icon/organik-icons.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
-    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
-    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
-    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/bootstrap/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/bootstrap-select/bootstrap-select.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/animate/animate.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/fontawesome/css/all.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/jarallax/jarallax.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/organik-icon/organik-icons.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/nouislider/nouislider.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/nouislider/nouislider.pips.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/odometer/odometer.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/swiper/swiper.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendors/tiny-slider/tiny-slider.min.css')}}" />
 
     <!-- template styles -->
-    <link rel="stylesheet" href="assets/css/organik.css" />
+    <link rel="stylesheet" href="{{asset('assets/css/organik.css')}}" />
 </head>
 
 <body>
     {{-- <div class="preloader">
-        <img class="preloader__image" width="55" src="assets/images/loader.png" alt="" />
+        <img class="preloader__image" width="55" src="{{asset('assets/images/loader.png" alt="" />
     </div> --}}
     <!-- /.preloader -->
     <div class="page-wrapper">
@@ -47,7 +47,7 @@
                 <div class="container">
                     <div class="main-logo">
                         <a href="index.html" class="logo">
-                            <img src="assets/images/logo-dark.png" width="105" alt="">
+                            <img src="{{asset('assets/images/logo-dark.png')}}" width="105" alt="">
                         </a>
                         <div class="mobile-nav__buttons">
                             <a href="#" class="search-toggler"><i class="organik-icon-magnifying-glass"></i></a>
@@ -124,7 +124,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                     {{-- <div class="main-menu__language">
-                        <img src="assets/images/resources/flag-1-1.jpg" alt="">
+                        <img src="{{asset('assets/images/resources/flag-1-1.jpg" alt="">
                         <label class="sr-only" for="language-select">select language</label>
                         <!-- /#language-select.sr-only -->
                         <select class="selectpicker" id="language-select-header">
@@ -159,7 +159,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url(assets/images/main-slider/main-slider-1-1.jpg);">
+                            style="background-image: url({{asset('assets/images/main-slider/main-slider-1-1.jpg);')}}">
                         </div>
                         <!-- /.image-layer -->
                         <div class="container">
@@ -175,7 +175,7 @@
                     </div><!-- /.swiper-slide -->
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url(assets/images/main-slider/main-slider-1-2.jpg);">
+                            style="background-image: url({{asset('assets/images/main-slider/main-slider-1-2.jpg);')}}">
                         </div>
                         <!-- /.image-layer -->
                         <div class="container">
@@ -265,7 +265,7 @@
         </section><!-- /.feature-box -->
 
         <section class="new-products">
-            <img src="assets/images/shapes/new-product-shape-1.png" alt="" class="new-products__shape-1">
+            <img src="{{asset('assets/images/shapes/new-product-shape-1.png')}}" alt="" class="new-products__shape-1">
             <div class="container">
                 <div class="new-products__top">
                     <div class="block-title ">
@@ -315,7 +315,7 @@
                 <div class="row">
                     <div class="col-md-6 wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="offer-banner__box"
-                            style="background-image: url(assets/images/resources/offer-banner-1-1.jpg);">
+                            style="background-image: url({{asset('assets/images/resources/offer-banner-1-1.jpg);')}}">
                             <div class="offer-banner__content">
                                 <h3><span>100%</span> <br>Organic</h3>
                                 <p>Quality Organic Food Store</p>
@@ -325,7 +325,7 @@
                     </div><!-- /.col-md-6 -->
                     <div class="col-md-6 wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="100ms">
                         <div class="offer-banner__box"
-                            style="background-image: url(assets/images/resources/offer-banner-1-2.jpg);">
+                            style="background-image: url({{asset('assets/images/resources/offer-banner-1-2.jpg);')}}">
                             <div class="offer-banner__content">
                                 <h3><span>100%</span> <br>Organic</h3>
                                 <p>Quality Organic Food Store</p>
@@ -338,7 +338,7 @@
         </section><!-- /.offer-banner -->
 
         <section class="funfact-one jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 50%">
-            <img src="assets/images/backgrounds/funfact-bg-1-1.jpg" class="jarallax-img" alt="">
+            <img src="{{asset('assets/images/backgrounds/funfact-bg-1-1.jpg')}}" class="jarallax-img" alt="">
             <div class="container">
                 <div class="row no-gutters">
                     <div class="col-md-6 col-lg-3  wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
@@ -370,20 +370,20 @@
         </section><!-- /.funfact-one -->
 
         <section class="call-to-action">
-            <img src="assets/images/shapes/call-shape-1.png" alt="" class="call-to-action__shape-1">
-            <img src="assets/images/shapes/call-shape-2.png" alt=""
+            <img src="{{asset('assets/images/shapes/call-shape-1.png')}}" alt="" class="call-to-action__shape-1">
+            <img src="{{asset('assets/images/shapes/call-shape-2.png')}}" alt=""
                 class="call-to-action__shape-2 wow fadeInLeft" data-wow-duration="1500ms">
             <h2 class="floated-text">Oragnic</h2><!-- /.floated-text -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-xl-6 clearfix">
-                        <img src="assets/images/resources/call-1-1.jpg" class="call-to-action__image" alt="">
+                        <img src="{{asset('assets/images/resources/call-1-1.jpg')}}" class="call-to-action__image" alt="">
                     </div><!-- /.col-md-12 col-lg-12 col-xl-12 -->
                     <div class="col-md-12 col-lg-12 col-xl-6 clearfix">
                         <div class="call-to-action__content">
                             <div class="block-title text-left">
                                 <div class="block-title__decor"
-                                    style="background-image: url(assets/images/shapes/leaf-2-1.png);"></div>
+                                    style="background-image: url({{asset('assets/images/shapes/leaf-2-1.png);')}}"></div>
                                 <!-- /.block-title__decor -->
                                 <p>Shopping Store</p>
                                 <h3>Organic Food Only</h3>
@@ -447,64 +447,64 @@
             }}'>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
-                            <img src="assets/images/resources/brand-1-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/brand-1-1.png')}}" alt="">
                         </div><!-- /.swiper-slide -->
                     </div><!-- /.swiper-wrapper -->
                 </div><!-- /.thm-swiper__slider -->
@@ -512,18 +512,18 @@
         </div><!-- /.client-carousel -->
 
         <section class="call-to-action-two">
-            <img src="assets/images/shapes/call-shape-2-1.png" alt="" class="call-to-action-two__shape-1">
-            <img src="assets/images/shapes/call-shape-2-2.png" alt="" class="call-to-action-two__shape-2">
-            <img src="assets/images/shapes/call-shape-2-3.png" alt="" class="call-to-action-two__shape-3">
-            <img src="assets/images/shapes/call-shape-2-4.png" alt="" class="call-to-action-two__shape-4">
-            <img src="assets/images/shapes/call-shape-2-5.png" alt="" class="call-to-action-two__shape-5">
-            <img src="assets/images/shapes/call-shape-2-6.png" alt="" class="call-to-action-two__shape-6">
+            <img src="{{asset('assets/images/shapes/call-shape-2-1.png')}}" alt="" class="call-to-action-two__shape-1">
+            <img src="{{asset('assets/images/shapes/call-shape-2-2.png')}}" alt="" class="call-to-action-two__shape-2">
+            <img src="{{asset('assets/images/shapes/call-shape-2-3.png')}}" alt="" class="call-to-action-two__shape-3">
+            <img src="{{asset('assets/images/shapes/call-shape-2-4.png')}}" alt="" class="call-to-action-two__shape-4">
+            <img src="{{asset('assets/images/shapes/call-shape-2-5.png')}}" alt="" class="call-to-action-two__shape-5">
+            <img src="{{asset('assets/images/shapes/call-shape-2-6.png')}}" alt="" class="call-to-action-two__shape-6">
             <div class="container">
                 <div class="row flex-xl-row-reverse">
                     <div class="col-lg-12 col-xl-6">
                         <div class="call-to-action-two__image">
                             <h2 class="floated-text">Healthy</h2><!-- /.floated-text -->
-                            <img src="assets/images/resources/call-2-1.png" alt="">
+                            <img src="{{asset('assets/images/resources/call-2-1.png')}}" alt="">
                         </div><!-- /.call-to-action-two__image -->
                     </div><!-- /.col-md-6 -->
                     <div class="col-lg-12 col-xl-6">
@@ -611,7 +611,7 @@
                     <div>
                         <div class="testimonials-one__single">
                             <div class="testimonials-one__image">
-                                <img src="assets/images/resources/testi-1-1.png" alt="">
+                                <img src="{{asset('assets/images/resources/testi-1-1.png')}}" alt="">
                             </div><!-- /.testimonials-one__image -->
                             <div class="testimonials-one__content">
                                 <p>I was very impresed by the osfins service lorem ipsum is simply free text used by
@@ -625,7 +625,7 @@
                     <div>
                         <div class="testimonials-one__single">
                             <div class="testimonials-one__image">
-                                <img src="assets/images/resources/testi-1-2.png" alt="">
+                                <img src="{{asset('assets/images/resources/testi-1-2.png')}}" alt="">
                             </div><!-- /.testimonials-one__image -->
                             <div class="testimonials-one__content">
                                 <p>I was very impresed by the osfins service lorem ipsum is simply free text used by
@@ -639,7 +639,7 @@
                     <div>
                         <div class="testimonials-one__single">
                             <div class="testimonials-one__image">
-                                <img src="assets/images/resources/testi-1-3.png" alt="">
+                                <img src="{{asset('assets/images/resources/testi-1-3.png')}}" alt="">
                             </div><!-- /.testimonials-one__image -->
                             <div class="testimonials-one__content">
                                 <p>I was very impresed by the osfins service lorem ipsum is simply free text used by
@@ -694,176 +694,176 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-1.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-1.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-1.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-1.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-2.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-2.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-2.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-2.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-3.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-3.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-3.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-3.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-4.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-4.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-4.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-4.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-5.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-5.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-5.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-5.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-1.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-1.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-1.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-1.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-2.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-2.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-2.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-2.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-3.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-3.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-3.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-3.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-4.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-4.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-4.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-4.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-5.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-5.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-5.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-5.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-1.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-1.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-1.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-1.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-2.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-2.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-2.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-2.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-3.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-3.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-3.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-3.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-4.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-4.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-4.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-4.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-5.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-5.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-5.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-5.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-1.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-1.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-1.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-1.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-2.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-2.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-2.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-2.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-3.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-3.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-3.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-3.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-4.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-4.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-4.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-4.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-5.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-5.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-5.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-5.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-1.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-1.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-1.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-1.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-2.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-2.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-2.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-2.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-3.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-3.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-3.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-3.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-4.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-4.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-4.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-4.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
                         <div class="swiper-slide">
                             <div class="gallery-one__item">
-                                <img src="assets/images/gallery/gallery-1-5.jpg" alt="">
-                                <a href="assets/images/gallery/gallery-1-5.jpg" class="img-popup"><i
+                                <img src="{{asset('assets/images/gallery/gallery-1-5.jpg')}}" alt="">
+                                <a href="{{asset('assets/images/gallery/gallery-1-5.jpg')}}" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div><!-- /.gallery-one__item -->
                         </div><!-- /.swiper-slide -->
@@ -873,14 +873,14 @@
         </section><!-- /.gallery-one -->
 
         <footer class="site-footer background-black-2">
-            <img src="assets/images/shapes/footer-bg-1-1.png" alt="" class="site-footer__shape-1">
-            <img src="assets/images/shapes/footer-bg-1-2.png" alt="" class="site-footer__shape-2">
+            <img src="{{asset('assets/images/shapes/footer-bg-1-1.png')}}" alt="" class="site-footer__shape-1">
+            <img src="{{asset('assets/images/shapes/footer-bg-1-2.png')}}" alt="" class="site-footer__shape-2">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-widget footer-widget__about-widget">
                             <a href="index.html" class="footer-widget__logo">
-                                <img src="assets/images/logo-light.png" alt="" width="105"
+                                <img src="{{asset('assets/images/logo-light.png')}}" alt="" width="105"
                                     height="43">
                             </a>
                             <p class="thm-text-dark">Atiam rhoncus sit amet adip
@@ -987,7 +987,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="organik-icon-close"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/logo-light.png" width="155"
+                <a href="index.html" aria-label="logo image"><img src="{{asset('assets/images/logo-light.png')}}" width="155"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->
@@ -1006,7 +1006,7 @@
             </ul><!-- /.mobile-nav__contact -->
             {{-- <div class="mobile-nav__top">
                 <div class="mobile-nav__language">
-                    <img src="assets/images/resources/flag-1-1.jpg" alt="">
+                    <img src="{{asset('assets/images/resources/flag-1-1.jpg" alt="">
                     <label class="sr-only" for="language-select">select language</label>
                     <!-- /#language-select.sr-only -->
                     <select class="selectpicker" id="language-select">
@@ -1034,7 +1034,7 @@
                 <span class="mini-cart__close mini-cart__toggler"><i class="organik-icon-close"></i></span>
             </div><!-- /.mini-cart__top -->
             <div class="mini-cart__item">
-                <img src="assets/images/products/cart-1-1.jpg" alt="">
+                <img src="{{asset('assets/images/products/cart-1-1.jpg')}}" alt="">
                 <div class="mini-cart__item-content">
                     <div class="mini-cart__item-top">
                         <h3><a href="product-details.html">Banana</a></h3>
@@ -1048,7 +1048,7 @@
                 </div><!-- /.mini-cart__item-content -->
             </div><!-- /.mini-cart__item -->
             <div class="mini-cart__item">
-                <img src="assets/images/products/cart-1-2.jpg" alt="">
+                <img src="{{asset('assets/images/products/cart-1-2.jpg')}}" alt="">
                 <div class="mini-cart__item-content">
                     <div class="mini-cart__item-top">
                         <h3><a href="product-details.html">Tomato</a></h3>
@@ -1062,7 +1062,7 @@
                 </div><!-- /.mini-cart__item-content -->
             </div><!-- /.mini-cart__item -->
             <div class="mini-cart__item">
-                <img src="assets/images/products/cart-1-3.jpg" alt="">
+                <img src="{{asset('assets/images/products/cart-1-3.jpg')}}" alt="">
                 <div class="mini-cart__item-content">
                     <div class="mini-cart__item-top">
                         <h3><a href="product-details.html">Bread</a></h3>
@@ -1098,25 +1098,25 @@
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
 
-    <script src="assets/vendors/jquery/jquery-3.5.1.min.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
-    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
-    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
-    <script src="assets/vendors/odometer/odometer.min.js"></script>
-    <script src="assets/vendors/swiper/swiper.min.js"></script>
-    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
-    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
-    <script src="assets/vendors/wow/wow.js"></script>
-    <script src="assets/vendors/isotope/isotope.js"></script>
-    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="{{asset('assets/vendors/jquery/jquery-3.5.1.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/bootstrap/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/bootstrap-select/bootstrap-select.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/jarallax/jarallax.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/jquery-appear/jquery.appear.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/jquery-validate/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/nouislider/nouislider.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/odometer/odometer.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/swiper/swiper.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/tiny-slider/tiny-slider.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/wnumb/wNumb.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/wow/wow.js')}}"></script>
+    <script src="{{asset('assets/vendors/isotope/isotope.js')}}"></script>
+    <script src="{{asset('assets/vendors/countdown/countdown.min.js')}}"></script>
     <!-- template js -->
-    <script src="assets/js/organik.js"></script>
+    <script src="{{asset('assets/js/organik.js')}}"></script>
 </body>
 
 </html>
