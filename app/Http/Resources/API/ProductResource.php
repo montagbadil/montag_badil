@@ -11,13 +11,13 @@ class ProductResource extends JsonResource
     {
         return [
             'id'=>$this->id,
-            'name'=>$this->name,
-            'description'=>$this->description,
-            'notes'=>$this->notes,
-            'is_alternative'=>$this->is_alternative,
-            'barcode'=>$this->barcode,
+            'product_name'=>$this->name,
+            'product_description'=>$this->description,
+            'product_additional_notes'=>$this->notes,
+            'isAlternative'=>$this->is_alternative,
+            'product_barcode'=>$this->barcode,
             'status'=>$this->status,
-            'image' => $this->getFirstMediaUrl('product'),
+            'product_logo' => $this->getFirstMediaUrl('product'),
             'user'=>UserResource::make($this->whenLoaded('user')),
             'brand'=>CategoryResource::make($this->whenLoaded('brand')),
         ];

@@ -11,12 +11,12 @@ class ProductAlternativeResource extends JsonResource
     {
         return [
             'id'=>$this->id,
-            'name'=>$this->name,
-            'description'=>$this->description,
-            'notes'=>$this->notes,
-            'barcode'=>$this->barcode,
+            'product_name'=>$this->name,
+            'product_description'=>$this->description,
+            'product_additional_notes'=>$this->notes,
+            'product_barcode'=>$this->barcode,
             'status'=>$this->status,
-            'image' => $this->getFirstMediaUrl('product_alternative'),
+            'product_logo' => $this->getFirstMediaUrl('product_alternative'),
             'user'=>UserResource::make($this->whenLoaded('user')),
             'brand'=>CategoryResource::make($this->whenLoaded('brand')),
         ];
