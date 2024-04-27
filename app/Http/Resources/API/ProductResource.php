@@ -20,6 +20,8 @@ class ProductResource extends JsonResource
             'product_logo' => $this->getFirstMediaUrl('product'),
             'user'=>UserResource::make($this->whenLoaded('user')),
             'brand'=>CategoryResource::make($this->whenLoaded('brand')),
+            'productAlternatives'=>ProductAlternativeResource::collection($this->whenLoaded('productAlternatives')),
+
         ];
     }
 }
