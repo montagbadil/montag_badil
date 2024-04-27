@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\web\AuthController;
 use App\Http\Controllers\web\HomeController;
 
@@ -23,4 +24,7 @@ Route::get('/brand/{id}',[HomeController::class, 'show'])->name('brand.details')
 
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+Route::get('/foo', function () {
+    Artisan::call('storage:link');
 });
