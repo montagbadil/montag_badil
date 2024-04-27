@@ -53,13 +53,9 @@ class ProductController extends Controller
         //     $product->addMediaFromRequest('image')->toMediaCollection('product');
         // }
         if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $path = $image->store('public','product_image'); // This will store the image in the storage/app/brand directory
-
-            // You can also specify a disk if you have multiple disks configured in your filesystems.php
-            // $path = $image->store('brand', 'public'); // This will store the image in the storage/app/public/brand directory
-
-            $product->image = $path;
+            $file = $request->file('image');
+            $filePath = $file->store('product_image', 'public');
+            $product->image = $filePath;
             $product->save();
         }
 

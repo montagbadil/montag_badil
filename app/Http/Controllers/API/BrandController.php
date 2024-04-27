@@ -72,13 +72,9 @@ class BrandController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $path = $image->store('public','brand_image'); // This will store the image in the storage/app/brand directory
-
-            // You can also specify a disk if you have multiple disks configured in your filesystems.php
-            // $path = $image->store('brand', 'public'); // This will store the image in the storage/app/public/brand directory
-
-            $brand->image = $path;
+            $file = $request->file('image');
+            $filePath = $file->store('brand_image', 'public');
+            $brand->image = $filePath;
             $brand->save();
         }
 
