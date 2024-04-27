@@ -15,14 +15,14 @@ class ProductController extends Controller
     public function index()
     {
         if (Product::exists()) {
-            $products = Product::with(['user','brand'])->paginate();
+            $products = Product::with(['user','brand','productAlternatives'])->paginate();
             return $this->paginateResponse(ProductResource::collection($products));
         }
         return $this->NotFoundResponse();
     }
     public function show($id)
     {
-        $product = Product::with(['user','brand'])->find($id);
+        $product = Product::with(['user','brand','productAlternatives'])->find($id);
         if ($product) {
             return $this->GetDataResponse(ProductResource::make($product));
         }
