@@ -3,6 +3,7 @@
 namespace App\Http\Resources\API;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ProductResource extends JsonResource
@@ -17,7 +18,8 @@ class ProductResource extends JsonResource
             'isAlternative'=>$this->is_alternative,
             'product_barcode'=>$this->barcode,
             'status'=>$this->status,
-            'product_logo' => $this->getFirstMediaUrl('product'),
+            // 'product_logo' => $this->getFirstMediaUrl('product'),
+            "product_logo" => Storage::disk('public')->url($this->image),
             'user'=>UserResource::make($this->whenLoaded('user')),
             'brand'=>CategoryResource::make($this->whenLoaded('brand')),
             'productAlternatives'=>ProductAlternativeResource::collection($this->whenLoaded('productAlternatives')),
