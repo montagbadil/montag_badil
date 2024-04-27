@@ -50,8 +50,18 @@ class BrandAlternativeController extends Controller
             'status'=>'pending'
         ]);
 
-        if($request->hasFile('image')) {
-            $brand->addMediaFromRequest('image')->toMediaCollection('brand_alternative');
+        // if($request->hasFile('image')) {
+        //     $brand->addMediaFromRequest('image')->toMediaCollection('brand_alternative');
+        // }
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $path = $image->store('public','brand_alternative_image'); // This will store the image in the storage/app/brand directory
+
+            // You can also specify a disk if you have multiple disks configured in your filesystems.php
+            // $path = $image->store('brand', 'public'); // This will store the image in the storage/app/public/brand directory
+
+            $brand->image = $path;
+            $brand->save();
         }
 
         if($brand) {

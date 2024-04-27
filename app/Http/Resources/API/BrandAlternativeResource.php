@@ -4,6 +4,7 @@ namespace App\Http\Resources\API;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class BrandAlternativeResource extends JsonResource
@@ -23,7 +24,8 @@ class BrandAlternativeResource extends JsonResource
             'brand_additional_notes'=>$this->notes,
             'brand_barcode'=>$this->barcode,
             'status'=>$this->status,
-            'brand_logo' => $this->getFirstMediaUrl('brand_alternative'),
+            // 'brand_logo' => $this->getFirstMediaUrl('brand_alternative'),
+            'brand_logo' => Storage::disk('public')->url($this->image),
             'user'=>UserResource::make($this->whenLoaded('user')),
             'brand_origin_country'=>CountryResource::make($this->whenLoaded('country')),
             'city'=>CityResource::make($this->whenLoaded('city')),

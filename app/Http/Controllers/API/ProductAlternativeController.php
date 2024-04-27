@@ -49,8 +49,18 @@ class ProductAlternativeController extends Controller
             'status'=>'pending'
         ]);
 
-        if($request->hasFile('image')) {
-            $product->addMediaFromRequest('image')->toMediaCollection('product_alternative');
+        // if($request->hasFile('image')) {
+        //     $product->addMediaFromRequest('image')->toMediaCollection('product_alternative');
+        // }
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $path = $image->store('public','product_alternative_image'); // This will store the image in the storage/app/brand directory
+
+            // You can also specify a disk if you have multiple disks configured in your filesystems.php
+            // $path = $image->store('brand', 'public'); // This will store the image in the storage/app/public/brand directory
+
+            $product->image = $path;
+            $product->save();
         }
 
         if($product) {
