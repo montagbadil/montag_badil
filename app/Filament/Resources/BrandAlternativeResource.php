@@ -19,7 +19,9 @@ use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Contracts\HasTable;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\BrandAlternativeResource\Pages;
@@ -86,12 +88,13 @@ class BrandAlternativeResource extends Resource
                             ->required()
                             ->options(StatusType::class),
                             
-                        SpatieMediaLibraryFileUpload::make('brand_logo')
-                            ->collection('brand_alternative')
-                            ->image()
-                            ->acceptedFileTypes(['image/png', 'image/jpeg'])
-                            ->maxSize(1024)
-                            ->columnSpanFull(),
+                        // SpatieMediaLibraryFileUpload::make('brand_logo')
+                        //     ->collection('brand_alternative')
+                        //     ->image()
+                        //     ->acceptedFileTypes(['image/png', 'image/jpeg'])
+                        //     ->maxSize(1024)
+                        //     ->columnSpanFull(),
+                        FileUpload::make('image')->directory('brand_alternative_image'),
 
                         Select::make('user_id')
                             ->relationship('user', 'name')
@@ -190,10 +193,11 @@ class BrandAlternativeResource extends Resource
 
                 TextColumn::make('status'),
                 
-                SpatieMediaLibraryImageColumn::make('brand_logo')
-                    ->collection('brand_alternative')
-                    ->width(150)
-                    ->height(150),
+                // SpatieMediaLibraryImageColumn::make('brand_logo')
+                //     ->collection('brand_alternative')
+                //     ->width(150)
+                //     ->height(150),
+                ImageColumn::make('image'),
 
                 TextColumn::make('user.name')
                     ->searchable()

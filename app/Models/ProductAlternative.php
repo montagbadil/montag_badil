@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class ProductAlternative extends Model implements HasMedia
 {
     use HasFactory,InteractsWithMedia;
+    
     protected $fillable = [
         'name',
         'description',
@@ -25,9 +26,10 @@ class ProductAlternative extends Model implements HasMedia
         'user_id',
         'brand_id',
     ];
+
     public function brand(): BelongsTo
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Brand::class);
     }
     public function user(): BelongsTo
     {

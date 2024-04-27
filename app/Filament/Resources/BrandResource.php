@@ -37,7 +37,7 @@ use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 class BrandResource extends Resource
 {
     protected static ?string $model = Brand::class;
-    
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Brand';
     protected static ?int $navigationSort = 5;
@@ -104,12 +104,12 @@ class BrandResource extends Resource
                         //     ->acceptedFileTypes(['image/png', 'image/jpeg'])
                         //     ->maxSize(1024)
                         //     ->columnSpanFull(),
-                        
+
                         FileUpload::make('image')->directory('brand_image'),
 
                         Select::make('user_id')
                             ->relationship('user', 'name'),
-                            // ->required(),
+                        // ->required(),
 
                         Select::make('country_id')
                             ->relationship('country', 'name')
@@ -118,7 +118,7 @@ class BrandResource extends Resource
                             ->live(),
 
                         Select::make('city_id')
-                            ->options(fn (Get $get): Collection => City::query()
+                            ->options(fn(Get $get): Collection => City::query()
                                 ->where('country_id', $get('country_id'))
                                 ->pluck('name', 'id'))
                             ->label('City')
@@ -128,13 +128,13 @@ class BrandResource extends Resource
 
                         Select::make('category_id')
                             ->relationship('category', 'name'),
-                            // ->required(),
+                        // ->required(),
                         Group::make([
                             Select::make('brandAlternatives')
                                 ->relationship('brandAlternatives', 'name')
                                 ->multiple()
                                 ->preload(),
-                        ])->hidden(fn (Get $get): bool => $get('is_alternative')),
+                        ])->hidden(fn(Get $get): bool => $get('is_alternative')),
 
                     ])->columns(2)
 
@@ -215,80 +215,8 @@ class BrandResource extends Resource
 
                 TextColumn::make('status'),
 
-                // SpatieMediaLibraryImageColumn::make('brand_logo')
-                //     ->collection('brand')
-                //     ->width(150)
-                //     ->height(150),
+                ImageColumn::make('image'),
                 
-                TextColumn::make('No')->state(
-                    static function (HasTable $livewire, stdClass $rowLoop): string {
-                        return (string) (
-                            $rowLoop->iteration +
-                            ($livewire->getTableRecordsPerPage() * (
-                                $livewire->getTablePage() - 1
-                            ))
-                        );
-                    }
-                ),
-
-                TextColumn::make('name')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-
-                TextColumn::make('founder')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('owner')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('year')
-                    ->searchable()
-                    ->date('d-m-Y')
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('url')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('description')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('parent_company')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('industry')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('notes')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('barcode')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('status'),
-                
-                SpatieMediaLibraryImageColumn::make('brand_logo')
-                    ->collection('brand_alternative')
-                    ->width(150)
-                    ->height(150),
 
                 TextColumn::make('user.name')
                     ->searchable()
@@ -323,25 +251,7 @@ class BrandResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: false),
 
-                TextColumn::make('user.name')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
 
-                TextColumn::make('country.name')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('city.name')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('category.name')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
 
                 TextColumn::make('brandAlternatives.name')
                     ->listWithLineBreaks()
@@ -350,17 +260,6 @@ class BrandResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: false),
 
-                TextColumn::make('created_at')
-                    ->searchable()
-                    ->dateTime('d-m-Y H:i')
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
-
-                TextColumn::make('updated_at')
-                    ->searchable()
-                    ->dateTime('d-m-Y H:i')
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
             ])
             ->filters([
                 //

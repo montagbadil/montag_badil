@@ -20,6 +20,8 @@ use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Contracts\HasTable;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ProductResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -65,13 +67,14 @@ class ProductResource extends Resource
                             ->required()
                             ->options(StatusType::class),
 
-                        SpatieMediaLibraryFileUpload::make('product_logo')
-                            ->collection('product')
-                            ->image()
-                            ->acceptedFileTypes(['image/png', 'image/jpeg'])
-                            ->maxSize(1024)
-                            ->columnSpanFull(),
-
+                        // SpatieMediaLibraryFileUpload::make('product_logo')
+                        //     ->collection('product')
+                        //     ->image()
+                        //     ->acceptedFileTypes(['image/png', 'image/jpeg'])
+                        //     ->maxSize(1024)
+                        //     ->columnSpanFull(),
+                        FileUpload::make('image')->directory('product_image'),
+                        
                         Select::make('user_id')
                             ->relationship('user', 'name')
                             ->required(),
@@ -136,11 +139,12 @@ class ProductResource extends Resource
 
                 TextColumn::make('status'),
 
-                SpatieMediaLibraryImageColumn::make('product_logo')
-                    ->collection('product')
-                    ->width(150)
-                    ->height(150),
-
+                // SpatieMediaLibraryImageColumn::make('product_logo')
+                //     ->collection('product')
+                //     ->width(150)
+                //     ->height(150),
+                ImageColumn::make('image'),
+                
                 TextColumn::make('user.name')
                     ->searchable()
                     ->sortable()

@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('barcode')->nullable();
             $table->string('image')->nullable();
             $table->enum('status',['pending','approved','rejected'])->default('pending');
-            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('brand_id')->constrained('brands')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('brand_id')->nullable()->constrained('brands')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }
