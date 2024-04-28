@@ -34,7 +34,6 @@ class BrandAlternative extends Model implements HasMedia
         'barcode',
         'status',
         'image',
-
         'category_id',
         'user_id',
         'country_id',

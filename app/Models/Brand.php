@@ -23,23 +23,22 @@ class Brand extends Model implements HasMedia
     use HasFactory,InteractsWithMedia;
     protected $fillable = [
         'name',
-        // 'founder',
-        // 'owner',
-        // 'year',
+        'founder',
+        'owner',
+        'year',
         'url',
         'description',
-        // 'parent_company',
-        // 'industry',
-        // 'notes',
+        'parent_company',
+        'industry',
+        'notes',
         'image',
         'is_alternative',
-        // 'barcode',
-        // 'status',
-
+        'barcode',
+        'status',
         'category_id',
-        // 'user_id',
+        'user_id',
         'country_id',
-        // 'city_id'
+        'city_id'
     ];
     protected function year(): Attribute
     {
