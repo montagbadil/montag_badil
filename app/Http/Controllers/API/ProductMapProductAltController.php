@@ -16,7 +16,7 @@ class ProductMapProductAltController extends Controller
             // $alternativeIds = $request->alternative_id;
             $productAlternative = ProductAlternative::where('id', $request->alternative_id)->get();
             // $productAlternativeIds = $productAlternatives->pluck('id')->toArray();
-            $product->productAlternatives()->sync($productAlternative);
+            $product->productAlternatives()->attach($productAlternative);
             return response()->json([
                 'message'=>'Product and ProductAlternative sync successfully',
                 'data'=>[],

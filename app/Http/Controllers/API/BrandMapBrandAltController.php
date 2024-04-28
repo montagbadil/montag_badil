@@ -16,7 +16,7 @@ class BrandMapBrandAltController extends Controller
             // $alternativeIds = $request->alternative_id;
             $brandAlternative = BrandAlternative::where('id', $request->alternative_id)->first();
             // $brandAlternativeIds = $brandAlternatives->pluck('id')->toArray();
-            $brand->brandAlternatives()->sync($brandAlternative);
+            $brand->brandAlternatives()->attach($brandAlternative);
             return response()->json([
                 'message' => 'Brand and BrandAlternatives synced successfully',
                 'data' => [],
