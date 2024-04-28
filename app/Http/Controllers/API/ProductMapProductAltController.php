@@ -13,10 +13,10 @@ class ProductMapProductAltController extends Controller
     {
         $product = Product::find($request->product_id);
         if (!$product->is_alternative) {
-            $alternativeIds = $request->alternative_id;
-            $productAlternatives = ProductAlternative::whereIn('id', $alternativeIds)->get();
-            $productAlternativeIds = $productAlternatives->pluck('id')->toArray();
-            $product->productAlternatives()->sync($productAlternativeIds);
+            // $alternativeIds = $request->alternative_id;
+            $productAlternative = ProductAlternative::where('id', $request->alternative_id)->get();
+            // $productAlternativeIds = $productAlternatives->pluck('id')->toArray();
+            $product->productAlternatives()->sync($productAlternative);
             return response()->json([
                 'message'=>'Product and ProductAlternative sync successfully',
                 'data'=>[],

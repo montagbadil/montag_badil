@@ -13,10 +13,10 @@ class BrandMapBrandAltController extends Controller
     {
         $brand = Brand::find($request->brand_id);
         if (!$brand->is_alternative) {
-            $alternativeIds = $request->alternative_id; // Get all the alternative_ids from the request
-            $brandAlternatives = BrandAlternative::whereIn('id', $alternativeIds)->get(); // Retrieve all the BrandAlternatives using the alternative_ids
-            $brandAlternativeIds = $brandAlternatives->pluck('id')->toArray(); // Get the IDs of the retrieved BrandAlternatives
-            $brand->brandAlternatives()->sync($brandAlternativeIds); // Sync the BrandAlternatives with the brand
+            // $alternativeIds = $request->alternative_id;
+            $brandAlternative = BrandAlternative::where('id', $request->alternative_id)->first();
+            // $brandAlternativeIds = $brandAlternatives->pluck('id')->toArray();
+            $brand->brandAlternatives()->sync($brandAlternative);
             return response()->json([
                 'message' => 'Brand and BrandAlternatives synced successfully',
                 'data' => [],

@@ -15,8 +15,9 @@ class storeRequest extends FormRequest
     {
         return [
             'brand_id' => ['required',Rule::exists('brands','id')],
-            'alternative_id' => ['required', 'array'],
-            'alternative_id.*' => ['required', Rule::exists('brand_alternatives', 'id')],
+            // 'alternative_id' => ['required', 'array'],
+            // 'alternative_id.*' => ['required', Rule::exists('brand_alternatives', 'id')],
+            'alternative_id' => ['required', Rule::exists('brand_alternatives', 'id')],
         ];
     }
 }
