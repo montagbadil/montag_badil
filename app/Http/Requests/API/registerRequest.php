@@ -18,8 +18,7 @@ class registerRequest extends FormRequest
         $userId = auth()->id();
         return [
             'name' => ['required', 'string', 'min:3', 'max:50'],
-            // 'email' => ['required', 'string', 'email', 'unique:' . User::class],
-            'email'=>['required','string',Rule::unique('users')->ignore($userId)],
+            'email'=>['required','email','string',Rule::unique('users')->ignore($userId)],
             'password' => ['required', Rules\Password::defaults()],
         ];
     }

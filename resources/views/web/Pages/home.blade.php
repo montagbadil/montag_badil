@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Montag Badil</title>
-    <link rel="shortcut icon" href="{{asset('logo.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('logo.png') }}" type="image/x-icon">
     <meta name="description" content="Montag Badil" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -33,7 +33,7 @@
             <div class="topbar">
                 <div class="container">
                     <div class="main-logo">
-                        <a href="{{route('home')}}" class="logo" target="_blank">
+                        <a href="{{ route('home') }}" class="logo" target="_blank">
                             <img src="{{ asset('logo.png') }}" width="100" height="100" alt="Montag_Logo">
                         </a>
                         <div class="mobile-nav__buttons">
@@ -62,7 +62,6 @@
                         </div><!-- /.topbar__info -->
                         <div class="topbar__buttons">
                             <a href="#" class="search-toggler"><i class="organik-icon-magnifying-glass"></i></a>
-                            {{-- <a href="#" class="mini-cart__toggler"><i class="organik-icon-shopping-cart"></i></a> --}}
                         </div><!-- /.topbar__buttons -->
                     </div><!-- /.topbar__left -->
 
@@ -71,11 +70,11 @@
             <nav class="main-menu">
                 <div class="container">
                     <div class="main-menu__login">
-                        <a href="{{route('login')}}"><i class="organik-icon-user"></i>Login / Register</a>
+                        <a href="{{ route('login') }}"><i class="organik-icon-user"></i>Login / Register</a>
                     </div><!-- /.main-menu__login -->
                     <ul class="main-menu__list">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{{ route('home') }}" target="_blank">Home</a>
                         </li>
                         <li>
                             <a href="about.html">About</a>
@@ -117,7 +116,7 @@
                                 <div class="col-xl-12 col-lg-12 text-center">
                                     <h2><span>Oragnic</span> <br>
                                         Food Market</h2>
-                                    <a href="products.html" class=" thm-btn">Order Now</a>
+                                    {{-- <a href="products.html" class=" thm-btn">Order Now</a> --}}
                                     <!-- /.thm-btn dynamic-radius -->
                                 </div><!-- /.col-lg-7 text-right -->
                             </div><!-- /.row -->
@@ -133,7 +132,7 @@
                                 <div class="col-xl-12 col-lg-12 text-center">
                                     <h2><span>Oragnic</span> <br>
                                         Food Market</h2>
-                                    <a href="products.html" class=" thm-btn">Order Now</a>
+                                    {{-- <a href="products.html" class=" thm-btn">Order Now</a> --}}
                                     <!-- /.thm-btn dynamic-radius -->
                                 </div><!-- /.col-lg-7 text-right -->
                             </div><!-- /.row -->
@@ -270,7 +269,7 @@
                             <div class="offer-banner__content">
                                 <h3><span>100%</span> <br>Organic</h3>
                                 <p>Quality Organic Food Store</p>
-                                <a href="products.html" class="thm-btn">Order Now</a><!-- /.thm-btn -->
+                                {{-- <a href="products.html" class="thm-btn">Order Now</a><!-- /.thm-btn --> --}}
                             </div><!-- /.offer-banner__content -->
                         </div><!-- /.offer-banner__box -->
                     </div><!-- /.col-md-6 -->
@@ -280,7 +279,7 @@
                             <div class="offer-banner__content">
                                 <h3><span>100%</span> <br>Organic</h3>
                                 <p>Quality Organic Food Store</p>
-                                <a href="products.html" class="thm-btn">Order Now</a><!-- /.thm-btn -->
+                                {{-- <a href="products.html" class="thm-btn">Order Now</a><!-- /.thm-btn --> --}}
                             </div><!-- /.offer-banner__content -->
                         </div><!-- /.offer-banner__box -->
                     </div><!-- /.col-md-6 -->
@@ -364,7 +363,7 @@
                                     </div><!-- /.col-md-6 -->
                                 </div><!-- /.row -->
                             </div><!-- /.call-to-action__wrap -->
-                            <a href="products.html" class="thm-btn">Order Now</a><!-- /.thm-btn -->
+                            {{-- <a href="products.html" class="thm-btn">Order Now</a><!-- /.thm-btn --> --}}
                         </div><!-- /.call-to-action__content -->
                     </div><!-- /.col-md-12 col-lg-12 col-xl-12 -->
                 </div><!-- /.row -->
@@ -524,7 +523,7 @@
                                     </ul><!-- /.list-unstyled -->
                                 </div><!-- /.col-md-6 -->
                             </div><!-- /.row -->
-                            <a href="products.html" class="thm-btn">Order Now</a><!-- /.thm-btn -->
+                            {{-- <a href="products.html" class="thm-btn">Order Now</a><!-- /.thm-btn --> --}}
                         </div><!-- /.call-to-action-two__content -->
                     </div><!-- /.col-md-6 -->
 
@@ -842,9 +841,8 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-widget footer-widget__about-widget">
-                            <a href="index.html" class="footer-widget__logo">
-                                <img src="{{ asset('assets/images/logo-light.png') }}" alt=""
-                                    width="105" height="43">
+                            <a href="{{ route('home') }}" class="footer-widget__logo">
+                                <img src="{{ asset('logo.png') }}" alt="" width="100" height="100">
                             </a>
                             <p class="thm-text-dark">Atiam rhoncus sit amet adip
                                 scing sed ipsum. Lorem ipsum
@@ -858,11 +856,11 @@
                             <ul class="list-unstyled footer-widget__contact">
                                 <li>
                                     <i class="fa fa-phone-square"></i>
-                                    <a href="tel:666-888-0000">666 888 0000</a>
+                                    <a href="tel:01128752357">01128752357</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-envelope"></i>
-                                    <a href="mailto:info@company.com">info@company.com</a>
+                                    <a href="mailto:sahla@test.com">sahla@test.com</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-map-marker-alt"></i>
@@ -877,50 +875,12 @@
                             <h3 class="footer-widget__title">Links</h3><!-- /.footer-widget__title -->
                             <ul class="list-unstyled footer-widget__links">
                                 <li>
-                                    <a href="index.html">Top Sellers</a>
-                                </li>
-                                <li>
-                                    <a href="products.html">Shopping</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About Store</a>
+                                    <a href="about.html">About</a>
                                 </li>
                                 <li>
                                     <a href="contact.html">Contact</a>
                                 </li>
-                                <li>
-                                    <a href="contact.html">Help</a>
-                                </li>
                             </ul><!-- /.list-unstyled footer-widget__contact -->
-                        </div><!-- /.footer-widget -->
-                    </div><!-- /.col-sm-12 col-md-6 col-lg-2 -->
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
-                        <div class="footer-widget">
-                            <h3 class="footer-widget__title">Explore</h3><!-- /.footer-widget__title -->
-                            <ul class="list-unstyled footer-widget__links">
-                                <li>
-                                    <a href="products.html">New Products</a>
-                                </li>
-                                <li>
-                                    <a href="checkout.html">My Account</a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">Support</a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">FAQs</a>
-                                </li>
-                            </ul><!-- /.list-unstyled footer-widget__contact -->
-                        </div><!-- /.footer-widget -->
-                    </div><!-- /.col-sm-12 col-md-6 col-lg-2 -->
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-widget">
-                            <h3 class="footer-widget__title">Newsletter</h3><!-- /.footer-widget__title -->
-                            <form action="#" data-url="YOUR_MAILCHIMP_URL" class="mc-form">
-                                <input type="email" name="EMAIL" id="mc-email" placeholder="Email Address">
-                                <button type="submit">Subscribe</button>
-                            </form>
-                            <div class="mc-form__response"></div><!-- /.mc-form__response -->
                         </div><!-- /.footer-widget -->
                     </div><!-- /.col-sm-12 col-md-6 col-lg-2 -->
                 </div><!-- /.row -->
@@ -930,11 +890,11 @@
                     <hr>
                     <div class="inner-container text-center">
                         <div class="bottom-footer__social">
-                            <a href="#" class="fab fa-twitter"></a>
-                            <a href="#" class="fab fa-facebook-square"></a>
-                            <a href="#" class="fab fa-instagram"></a>
+                            <a target="_blank" href="https://twitter.com/?lang=ar" class="fab fa-twitter"></a>
+                            <a target="_blank" href="https://www.facebook.com/" class="fab fa-facebook-square"></a>
+                            <a target="_blank" href="https://www.instagram.com/" class="fab fa-instagram"></a>
                         </div><!-- /.bottom-footer__social -->
-                        <p class="thm-text-dark">© Copyright <span class="dynamic-year"></span> by Company.com</p>
+                        <p class="thm-text-dark">© Copyright <span class="dynamic-year"></span> by sahla@test.com</p>
                     </div><!-- /.inner-container -->
                 </div><!-- /.container -->
             </div><!-- /.bottom-footer -->
@@ -950,7 +910,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="organik-icon-close"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="{{ asset('assets/images/logo-light.png') }}"
+                <a href="{{ route('home') }}" aria-label="logo image"><img src="{{ asset('logo.png') }}"
                         width="155" alt="" /></a>
             </div>
             <!-- /.logo-box -->
@@ -960,98 +920,21 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="organik-icon-email"></i>
-                    <a href="mailto:needhelp@organik.com">needhelp@organik.com</a>
+                    <a href="mailto:sahla@test.com">sahla@test.com</a>
                 </li>
                 <li>
                     <i class="organik-icon-calling"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:01128752357">01128752357</a>
                 </li>
-            </ul><!-- /.mobile-nav__contact -->
+            </ul>
             <div class="mobile-nav__top">
                 <div class="main-menu__login">
-                    <a href="{{route('login')}}"><i class="organik-icon-user"></i>Login / Register</a>
-                </div><!-- /.main-menu__login -->
-            </div><!-- /.mobile-nav__top -->
-
-
-
+                    <a href="{{ route('login') }}"><i class="organik-icon-user"></i>Login / Register</a>
+                </div>
+            </div>
         </div>
-        <!-- /.mobile-nav__content -->
     </div>
-    <!-- /.mobile-nav__wrapper -->
-
-    <div class="mini-cart">
-        <div class="mini-cart__overlay mini-cart__toggler"></div>
-        <div class="mini-cart__content">
-            <div class="mini-cart__top">
-                <h3 class="mini-cart__title">Shopping Cart</h3>
-                <span class="mini-cart__close mini-cart__toggler"><i class="organik-icon-close"></i></span>
-            </div><!-- /.mini-cart__top -->
-            <div class="mini-cart__item">
-                <img src="{{ asset('assets/images/products/cart-1-1.jpg') }}" alt="">
-                <div class="mini-cart__item-content">
-                    <div class="mini-cart__item-top">
-                        <h3><a href="product-details.html">Banana</a></h3>
-                        <p>$9.99</p>
-                    </div><!-- /.mini-cart__item-top -->
-                    <div class="quantity-box">
-                        <button type="button" class="sub">-</button>
-                        <input type="number" id="2" value="1" />
-                        <button type="button" class="add">+</button>
-                    </div>
-                </div><!-- /.mini-cart__item-content -->
-            </div><!-- /.mini-cart__item -->
-            <div class="mini-cart__item">
-                <img src="{{ asset('assets/images/products/cart-1-2.jpg') }}" alt="">
-                <div class="mini-cart__item-content">
-                    <div class="mini-cart__item-top">
-                        <h3><a href="product-details.html">Tomato</a></h3>
-                        <p>$9.99</p>
-                    </div><!-- /.mini-cart__item-top -->
-                    <div class="quantity-box">
-                        <button type="button" class="sub">-</button>
-                        <input type="number" id="2" value="1" />
-                        <button type="button" class="add">+</button>
-                    </div>
-                </div><!-- /.mini-cart__item-content -->
-            </div><!-- /.mini-cart__item -->
-            <div class="mini-cart__item">
-                <img src="{{ asset('assets/images/products/cart-1-3.jpg') }}" alt="">
-                <div class="mini-cart__item-content">
-                    <div class="mini-cart__item-top">
-                        <h3><a href="product-details.html">Bread</a></h3>
-                        <p>$9.99</p>
-                    </div><!-- /.mini-cart__item-top -->
-                    <div class="quantity-box">
-                        <button type="button" class="sub">-</button>
-                        <input type="number" id="2" value="1" />
-                        <button type="button" class="add">+</button>
-                    </div>
-                </div><!-- /.mini-cart__item-content -->
-            </div><!-- /.mini-cart__item -->
-            <a href="checkout.html" class="thm-btn mini-cart__checkout">Proceed To Checkout</a>
-        </div><!-- /.mini-cart__content -->
-    </div><!-- /.cart-toggler -->
-
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
-        <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="organik-icon-magnifying-glass"></i>
-                </button>
-            </form>
-        </div>
-        <!-- /.search-popup__content -->
-    </div>
-    <!-- /.search-popup -->
-
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
-
-
     <script src="{{ asset('assets/vendors/jquery/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('assets/vendors/bootstrap/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/vendors/bootstrap-select/bootstrap-select.min.js') }}"></script>
@@ -1069,7 +952,6 @@
     <script src="{{ asset('assets/vendors/wow/wow.js') }}"></script>
     <script src="{{ asset('assets/vendors/isotope/isotope.js') }}"></script>
     <script src="{{ asset('assets/vendors/countdown/countdown.min.js') }}"></script>
-    <!-- template js -->
     <script src="{{ asset('assets/js/organik.js') }}"></script>
 </body>
 
