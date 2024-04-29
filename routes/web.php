@@ -21,6 +21,7 @@ Route::post('/reset-password', [AuthController::class, 'resetPasswordMethod'])->
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
 Route::get('/brand/{id}',[HomeController::class, 'show'])->name('brand.details');
+Route::get('/brand_alternative/{id}',[HomeController::class, 'showAlt'])->name('brandAlternative.details');
 
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
