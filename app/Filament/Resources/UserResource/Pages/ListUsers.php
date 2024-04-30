@@ -7,6 +7,7 @@ use Filament\Resources\Components\Tab;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\UserResource;
 use Filament\Resources\Pages\ListRecords;
+use EightyNine\ExcelImport\ExcelImportAction;
 
 class ListUsers extends ListRecords
 {
@@ -25,6 +26,7 @@ class ListUsers extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
+            ExcelImportAction::make()->color("primary"),
             Actions\CreateAction::make(),
         ];
     }
