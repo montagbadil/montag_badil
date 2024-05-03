@@ -20,32 +20,32 @@ class UserWidget extends BaseWidget
                 ->description('New users that have joined')
                 ->descriptionIcon('heroicon-s-user-group', IconPosition::Before)
                 ->chart([1, 3, 5, 10, 20, 40])
-                ->color('success'),
+                ->color('danger'),
             Stat::make('Categories', Category::count())
                 ->description('categories in our store')
                 ->descriptionIcon('heroicon-s-rectangle-stack', IconPosition::Before)
                 ->chart([1, 3, 5, 10, 20, 40])
-                ->color('info'),
+                ->color('success'),
             Stat::make('Products', Product::count())
                 ->description('products in our store')
                 ->descriptionIcon('heroicon-s-rectangle-stack', IconPosition::Before)
                 ->chart([1, 3, 5, 10, 20, 40])
-                ->color('danger'),
+                ->color('info'),
             Stat::make('Alternative Products', ProductAlternative::count())
                 ->description('alternative products')
                 ->descriptionIcon('heroicon-s-rectangle-stack', IconPosition::Before)
                 ->chart([1, 3, 5, 10, 20, 40])
-                ->color('success'),
+                ->color('danger'),
             Stat::make('Brands', Brand::count())
                 ->description('brands in our store')
                 ->descriptionIcon('heroicon-s-rectangle-stack', IconPosition::Before)
                 ->chart([1, 3, 5, 10, 20, 40])
-                ->color('danger'),
+                ->color('success'),
             Stat::make('Alternative Brands', BrandAlternative::count())
                 ->description('alternative brands')
                 ->descriptionIcon('heroicon-s-rectangle-stack', IconPosition::Before)
                 ->chart([1, 3, 5, 10, 20, 40])
-                ->color('success'),
+                ->color('info'),
         ];
     }
 }

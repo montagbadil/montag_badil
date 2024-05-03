@@ -27,8 +27,10 @@ class AuthController extends Controller
     use AHM_Response;
     public function register(registerRequest $request)
     {
+        //get validated data
         $data = $request->validated();
-        $user = User::create($data);
+        // create user
+        $user = User::create($data); 
         $user->update([
             'type'=>'individual'
         ]);

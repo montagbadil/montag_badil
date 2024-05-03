@@ -23,4 +23,5 @@ class ListCategories extends ListRecords
     {
         return 'Category';
     }
+    
 }

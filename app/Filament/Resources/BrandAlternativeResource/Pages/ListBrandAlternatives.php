@@ -7,6 +7,7 @@ use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Resources\Components\Tab;
 use Illuminate\Database\Eloquent\Builder;
+use EightyNine\ExcelImport\ExcelImportAction;
 
 class ListBrandAlternatives extends ListRecords
 {
@@ -26,6 +27,8 @@ class ListBrandAlternatives extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
+            ExcelImportAction::make()
+                ->color("primary"),
             Actions\CreateAction::make(),
         ];
     }

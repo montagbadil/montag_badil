@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\CategoryResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\CategoryResource\RelationManagers;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
 
 class CategoryResource extends Resource
 {
@@ -41,16 +42,20 @@ class CategoryResource extends Resource
         return $table
             ->columns([
 
-                TextColumn::make('No')->state(
-                    static function (HasTable $livewire, stdClass $rowLoop): string {
-                        return (string) (
-                            $rowLoop->iteration +
-                            ($livewire->getTableRecordsPerPage() * (
-                                $livewire->getTablePage() - 1
-                            ))
-                        );
-                    }
-                ),
+                // TextColumn::make('No')->state(
+                //     static function (HasTable $livewire, stdClass $rowLoop): string {
+                //         return (string) (
+                //             $rowLoop->iteration +
+                //             ($livewire->getTableRecordsPerPage() * (
+                //                 $livewire->getTablePage() - 1
+                //             ))
+                //         );
+                //     }
+                // ),
+                TextColumn::make('id')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: false),
                 TextColumn::make('name')
                     ->searchable()
                     ->sortable()
@@ -79,8 +84,10 @@ class CategoryResource extends Resource
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
+                ExportBulkAction::make(),
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    
                 ]),
             ]);
     }

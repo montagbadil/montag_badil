@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('owner')->nullable();
             $table->date('year')->nullable();
             $table->string('url')->nullable();
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('parent_company')->nullable();
             $table->string('industry')->nullable();
             $table->string('notes')->nullable();
