@@ -23,9 +23,28 @@
             </li>
         </ul>
         <div class="mobile-nav__top">
-            <div class="main-menu__login">
-                <a href="{{ route('login') }}"><i class="organik-icon-user"></i>Login / Register</a>
-            </div>
+            @auth
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hello, {{ auth()->user()->name }}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+            @else
+                <div class="main-menu__login">
+                    <a href="{{ route('login') }}"><i class="organik-icon-user"></i>Login / Register</a>
+                </div><!-- /.main-menu__login -->
+            @endauth
         </div>
     </div>
 </div>

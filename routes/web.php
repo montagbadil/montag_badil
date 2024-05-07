@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\web\AuthController;
 use App\Http\Controllers\web\HomeController;
 
@@ -20,6 +19,7 @@ Route::post('/reset-password', [AuthController::class, 'resetPasswordMethod'])->
 
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
+Route::get('/about',[HomeController::class, 'aboutPage'])->name('about');
 Route::get('/brand/{id}',[HomeController::class, 'show'])->name('brand.details');
 Route::get('/brand_alternative/{id}',[HomeController::class, 'showAlt'])->name('brandAlternative.details');
 

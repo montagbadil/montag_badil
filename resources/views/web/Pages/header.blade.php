@@ -38,17 +38,37 @@
     </div><!-- /.topbar -->
     <nav class="main-menu">
         <div class="container">
-            <div class="main-menu__login">
-                <a href="{{ route('login') }}"><i class="organik-icon-user"></i>Login / Register</a>
-            </div><!-- /.main-menu__login -->
+            @auth
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hello, {{ auth()->user()->name }}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+            @else
+                <div class="main-menu__login">
+                    <a href="{{ route('login') }}"><i class="organik-icon-user"></i>Login / Register</a>
+                </div><!-- /.main-menu__login -->
+            @endauth
+
             <ul class="main-menu__list">
                 <li>
                     <a href="{{ route('home') }}" target="_blank">Home</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="{{ route('about') }}" target="_blank">About</a>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
             </ul>
         </div><!-- /.container -->
     </nav>

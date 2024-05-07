@@ -24,4 +24,7 @@ class HomeController extends Controller
         $brand_alt = BrandAlternative::findOrFail($id);
         return view('web.pages.brand_alter_details', compact('brand_alt'));
     }
+    public function aboutPage() {
+        return view('web.pages.about');
+    }
 }
