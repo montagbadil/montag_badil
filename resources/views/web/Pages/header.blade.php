@@ -68,7 +68,7 @@
                 <li>
                     <a href="{{ route('about') }}" target="_blank">About</a>
                 </li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="{{ route('contact') }}" target="_blank">Contact</a></li>
             </ul>
         </div><!-- /.container -->
     </nav>

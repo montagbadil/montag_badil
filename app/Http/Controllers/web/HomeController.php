@@ -4,8 +4,11 @@ namespace App\Http\Controllers\web;
 
 use App\Models\Brand;
 use App\Models\Category;
-use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\BrandAlternative;
+use App\Mail\web\ContactFormMail;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -26,5 +29,21 @@ class HomeController extends Controller
     }
     public function aboutPage() {
         return view('web.pages.about');
+    }
+    public function contactPage() {
+        return view('web.pages.contact');
+    }
+    public function sendMessage(Request $request)
+    {
+        $formData = [
+            'Name' => $request->input('name'),
+            'Email' => $request->input('email'),
+            'Phone' => $request->input('phone'),
+            'Message' => $request->input('message'),
+        ];
+    
+        Mail::to('admin@gmail.com')->send(new ContactFormMail($formData));
+    
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
 }
