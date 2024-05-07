@@ -2,7 +2,7 @@
 @section('title', 'Home Page')
 @section('content')
     <div class="page-wrapper">
-        @include('web.Pages.header')
+        @include('web.pages.header')
         <section class="main-slider">
             <div class="swiper-container thm-swiper__slider"
                 data-swiper-options='{
@@ -524,7 +524,7 @@
                 </div>
             </div><!-- /.container -->
         </section><!-- /.testimonials-one -->
-        @include('web.Pages.footer')
+        @include('web.pages.footer')
     </div><!-- /.page-wrapper -->
-    @include('web.Pages.mob_header')
+    @include('web.pages.mob_header')
 @endsection
