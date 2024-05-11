@@ -26,7 +26,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 text-center">
-                                    <h2><span>Oragnic</span> <br>
+                                    <h2><span>Organic</span> <br>
                                         Food Market</h2>
                                     {{-- <a href="products.html" class=" thm-btn">Order Now</a> --}}
                                     <!-- /.thm-btn dynamic-radius -->
@@ -135,7 +135,7 @@
                         <p>Recently Added</p>
                         <h3>New Products</h3>
                     </div><!-- /.block-title -->
-
+                    
                     <ul class="post-filter filters list-unstyled">
                         <li class="active filter" data-filter=".filter-item">All</li>
                         @foreach ($categories as $category)
@@ -143,7 +143,7 @@
                         @endforeach
                     </ul>
                 </div><!-- /.new-products__top -->
-
+                <a class="button-3" role="button" href="{{route('brand.insert')}}" target="_blank">Insert Brand</a>
                 <div class="row filter-layout">
                     @foreach ($categories as $category)
                         @foreach ($category->brands as $brand)

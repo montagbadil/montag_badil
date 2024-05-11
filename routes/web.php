@@ -22,6 +22,10 @@ Route::get('/',[HomeController::class, 'index'])->name('home');
 Route::get('/about',[HomeController::class, 'aboutPage'])->name('about');
 Route::get('/contact',[HomeController::class, 'contactPage'])->name('contact');
 Route::post('sendMessage',[HomeController::class, 'sendMessage'])->name('sendMessage');
+
+Route::get('/insertBrand',[HomeController::class, 'insertBrandView'])->name('brand.insert');
+Route::post('/store_brand',[HomeController::class, 'store_brand'])->name('brand.store');
+
 Route::get('/brand/{id}',[HomeController::class, 'show'])->name('brand.details');
 Route::get('/brand_alternative/{id}',[HomeController::class, 'showAlt'])->name('brandAlternative.details');
 

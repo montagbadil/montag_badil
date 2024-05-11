@@ -46,4 +46,14 @@ class HomeController extends Controller
     
         return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
+
+    public function insertBrandView()
+    {
+        $categories = Category::get();
+        return view('web.pages.insertBrand',compact('categories'));
+    }
+    public function store_brand(Request $request)
+    {
+        dd($request,$request->user()->id);
+    }
 }
